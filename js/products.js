@@ -61,6 +61,7 @@ function showProductList(array){
                         <p>`+ product.description  +`</p>
                         </div>
                         <small class="text-muted">` + product.soldCount + ` vendidos</small>
+                        <a href="product-info.html"><button style="float: right;">Ver</button></a>
                     
                     </div>
 
