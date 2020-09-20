@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         if (bien) {
             if (username.value && password.value) {
+                localStorage.setItem("Usuario-Logueado", username.value);
                 window.location = "cover.html";
             } else {
                 alert("Datos incompletos. Por favor, complete los campos");

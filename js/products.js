@@ -49,7 +49,7 @@ function showProductList(array){
         ((maxCost == undefined) || (maxCost != undefined && parseInt(product.cost) <= maxCost)))
 
         htmlContentToAppend += `
-        <div class="list-group-item list-group-item-action">
+        <a href="product-info.html" class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-3">
                     <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
@@ -61,13 +61,12 @@ function showProductList(array){
                         <p>`+ product.description  +`</p>
                         </div>
                         <small class="text-muted">` + product.soldCount + ` vendidos</small>
-                        <a href="product-info.html"><button style="float: right;">Ver</button></a>
                     
                     </div>
 
                 </div>
             </div>
-        </div>
+        </a>
         `
 
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend; // acá buscaba el id "cat-list.contain"
