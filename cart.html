@@ -40,26 +40,76 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <div class= "dropdowon" id="infoUser" style="display: none;">
-        <button id="usuario" style="color: white;" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="cart.html">Mi Carrito</a>
-            <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
-            <div class="dropdown-divider"></div>
-            <a id="exit" class="dropdown-item">Salir</a>
-            </div>
-    </div>
+      <div class="dropdowon" id="infoUser" style="display: none;">
+        <button id="usuario" style="color: white;" class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="cart.html">Mi Carrito</a>
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+          <div class="dropdown-divider"></div>
+          <a id="exit" class="dropdown-item">Salir</a>
+        </div>
+      </div>
     </div>
   </nav>
+  <div class="text-center p-4">
+    <h2>Carrito</h2>
+    <p class="lead">Aquí se mostrarán todos los artículos que quieras comprar.</p>
+  </div>
+
   <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 5 (Fecha de entrega: 11/10/2020) y Entrega 6 (Fecha de entrega: 25/10/2020).</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>Artículo</th>
+          <th>Nombre</th>
+          <th>Precio ($)</th>
+          <th>Unidades</th>
+          <th>Total ($)</th>
+        </tr>
+      </thead>
+      <tbody id="carrito">
+
+      </tbody>
+    </table>
+  </div>
+  <div class="container p-5">
+    <hr>
+    <h5>Envio</h5>
+    <div>
+      <input type="radio" id="envio" name="envio" checked="" required>
+      <label for="envio"> Montevideo</label> <br>
+      <input type="radio" id="envio1" name="envio">
+      <label for="envio1"> Sur del Río Negro</label> <br>
+      <input type="radio" id="envio2" name="envio">
+      <label for="envio2"> Norte del Río Negro</label> <br>
+    </div>
+    <button type="button" class="btn btn-success" data-toggle="modal"
+      data-target="#exampleModalCenter">Confirmar</button>
+    <hr>
+  </div>
+  <!---------------------------------------------MODAL----------------------------------------------------------------------------------------------->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" style="background-image: url(img/2.jpg); background-size: cover;" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle" style="color: blue;">¡Gracias por comprar por e-Mercado!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="color: green;">
+          Su compra se ha realizado con exito.
+        </div>
+        <div class="modal-footer">
+          <a href="cover.html"><button type="button" class="btn btn-success">Cerrar</button></a>
+        </div>
+      </div>
     </div>
   </div>
+  <!---------------------------------------------MODAL----------------------------------------------------------------------------------------------->
   <div id="spinner-wrapper">
     <div class="lds-ring">
       <div></div>
