@@ -8,13 +8,13 @@ function relacionados(listaProductos, relaciones) {
 
     relaciones.forEach(function (i) {
         relacionadosConProducto += `<div>
-        <a href="product-info.html" class="list-group-item list-group-item-action">
+        <a href="product-info.html" class="list-group-item list-group-item-action"  >
         <div class="row">
         <div class="col-3">
         <img src="${listaProductos[i].imgSrc}"width="250"<br>
         </div>
         <div class="col">
-            <div class="d-flex w-100 justify-content-between">
+            <div class=" d-flex w-100 justify-content-between">
                 <div class="mb-1">
                 <h4>${listaProductos[i].name}</h4>
                 <p>${listaProductos[i].description}  A un precio un buen precio de ${listaProductos[i].cost} USD al contado</p><br>
@@ -40,12 +40,60 @@ function mostrarAuto(coche, comentarios) {
     info += `<h2> ${coche.name} </h2>
           <p> ${coche.description} </p>`
 
-    img += `<img src="${coche.images[0]}" width="400">;
-    <img src="${coche.images[1]}" width="400">;
-    <img src="${coche.images[4]}" width="400">;
-    <img src="${coche.images[2]}" width="400">;
-    <img src="${coche.images[3]}" width="400">; <br>
-    <br><br><hr>
+    img += `
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+            <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="${coche.images[0]}" class="d-block w-100"
+                    alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                <h5>Chevrolet Onix Joy </h5>
+                    <p>Potenciá tu actitud con Onix Joy. </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="${coche.images[1]}"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="${coche.images[4]}"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="${coche.images[2]}"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="${coche.images[3]}"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
        `;
 
     comentarios.forEach(function (comentar) {
