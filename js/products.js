@@ -2,7 +2,7 @@ var productsArray = [];
 const ORDER_ASC_DOLAR = "UPDOLAR"
 const ORDER_DESC_DOLAR = "DODOLAR"
 const ORDER_DESC_SOLD = "Ventas"
-var minCost = undefined  
+var minCost = undefined
 var maxCost = undefined
 
 function sortProducts(criterio, array) {
@@ -16,57 +16,59 @@ function sortProducts(criterio, array) {
                 return 0;
             });
 
-    }   else if (criterio === ORDER_DESC_DOLAR) {
+    } else if (criterio === ORDER_DESC_DOLAR) {
         result = array.sort(
 
             function (a, b) {
-                if (a.cost > b.cost){
+                if (a.cost > b.cost) {
                     return -1;
                 }
-                if (a.cost < b.cost){
+                if (a.cost < b.cost) {
                     return 1;
                 }
                 return 0;
             });
-        
+
     } else if (criterio === ORDER_DESC_SOLD) {
-        result = array.sort(function (a, b){
-            if (a.soldCount > b.soldCount) {return -1;} 
-            if (a.soldCount < b.soldCount) {return 1;}
+        result = array.sort(function (a, b) {
+            if (a.soldCount > b.soldCount) { return -1; }
+            if (a.soldCount < b.soldCount) { return 1; }
             return 0;
         })
     }
     return result;
 }
 
-function showProductList(array){
+function showProductList(array) {
 
     let htmlContentToAppend = "";
-    for(let i = 0; i < array.length; i++){
+    for (let i = 0; i < array.length; i++) {
         let product = array[i];
 
         if (((minCost == undefined) || (minCost != undefined && parseInt(product.cost) >= minCost)) &&
-        ((maxCost == undefined) || (maxCost != undefined && parseInt(product.cost) <= maxCost)))
+            ((maxCost == undefined) || (maxCost != undefined && parseInt(product.cost) <= maxCost)))
 
-        htmlContentToAppend += `
-        <a href="product-info.html" class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
-                </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <div class="mb-1">
-                        <h4>`+ product.name + "  -  " +  product.cost + ` USD</h4>
-                        <p>`+ product.description  +`</p>
-                        </div>
-                        <small class="text-muted">` + product.soldCount + ` vendidos</small>
+            htmlContentToAppend += `
+        <div class="col-lg-4 col-md-6 col-sm-6">
+            <a href="product-info.html" class="card mb-4 shadow-sm custom-card">
+                
+                    <img class="bd-placeholder-img card-img-top" src="` + product.imgSrc + `" alt="` + product.description + `" class="img-thumbnail">
+                
+                <div class="card-body">
                     
-                    </div>
+                        <div class="card-text">
+                        <h4>`+ product.name + "  -  " + product.cost + ` USD</h4>
+                        <p>`+ product.description + `</p>
+                        </div>
+                        <div class"d-flex justify-content-between align-items-center">
+                        
+                        <small class="text-muted">` + product.soldCount + ` vendidos</small>
+                        </div>
+                   
 
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
         `
 
         document.getElementById("prod-list-container").innerHTML = htmlContentToAppend; // acá buscaba el id "cat-list.contain"
@@ -104,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function (e) {
 
         showProductList(productsArray);
     });
-   
+
     document.getElementById("rangeFilterCount").addEventListener("click", function () {
 
 

@@ -40,30 +40,84 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <div class= "dropdowon" id="infoUser" style="display: none;">
-        <button id="usuario" style="color: white;" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="cart.html">Mi Carrito</a>
-            <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
-            <div class="dropdown-divider"></div>
-            <a id="exit" class="dropdown-item">Salir</a>
-            </div>
-    </div>
+      <div class="dropdowon" id="infoUser" style="display: none;">
+        <button id="usuario" style="color: white;" class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="cart.html">Mi Carrito</a>
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+          <div class="dropdown-divider"></div>
+          <a id="exit" class="dropdown-item">Salir</a>
+        </div>
+      </div>
     </div>
   </nav>
-  <section class="jumbotron text-center">
-    <div class="m-5">
-      <h1></h1>
+  <section class="jumbotron text-center"></section>
+
+  <div class="container">
+    <br>
+    <div id="nickUser"> </div><br>
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="profile-sidebar">
+          <div class="profile userpic" style="text-align: center;">
+            <hr>
+            <p style="text-align: center;  color: #99c855;">Imagen de Perfil</p><img class="img-responsive"
+              id="imagenPerfil" src="img/perfil.jpg" alt="">
+
+          </div><br>
+          <div class="row justify-content-md-center">
+            <input type="url" placeholder="Ingresar URL para la imagen" id="imagenURL" class="form-control col-6">
+            <button type="submit" id="botonPerfilURL" class="btn btn-outline-danger">Enviar URL</button>
+          </div>
+          <hr><br>
+          <div class="row">
+            <div class="form-group col-6">
+
+              <label for="nombrePerfil">Nombre</label>
+              <input type="text" id="nombrePerfil" class="form-control" placeholder="Nombre*" required><br>
+            </div>
+            <div class="form-group col">
+              <label for="apellidoPerfil">Apellido</label>
+              <input type="text" id="apellidoPerfil" class="form-control col-12" placeholder="Apellido*" required><br>
+            </div>
+            <div class="col-12">
+              <label for="emailPerfil">E-mail</label>
+              <input type="text" id="emailPerfil" class="form-control col-12" placeholder="E-mail*" required><br>
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-3">
+              <label for="edadPerfil">Edad</label>
+              <input type="number" id="edadPerfil" class="form-control " placeholder="Edad*" required>
+            </div>
+            <div class="form-group col-4">
+              <label for="telefonoPerfil">Teléfono</label>
+              <input type="number" id="telefonoPerfil" class="form-control " placeholder="Teléfono de contacto*"
+                required>
+            </div>
+            <div class="form-group col">
+              <label for="paisPerfil">País</label>
+              <input type="text" id="paisPerfil" class="form-control " placeholder="País de residencia">
+            </div>
+          </div>
+          <div class="row">
+            <div class="form-group col-lg-8 col-md-7 col-sm-6"></div>
+            <div class="form-group col"><small class="text-muted">Los espacios con <strong>*</strong> son
+                obligatorios</small></div>
+          </div>
+          <div id="alertaPerfil"></div>
+          <hr>
+          <div style="text-align: center;"><button type="button" id="guardarCambios"
+              class="btn btn-success col-lg-8 col-md-10 col-sm-12">Guardar cambios</button>
+          </div><br>
+        </div>
+      </div>
     </div>
-  </section>
-  <div class="container p-5">
-    <div class="alert alert-danger" role="alert" style="position: relative; width:auto; top: 0;">
-      <h4 class="alert-heading">¡A trabajar! :)</h4>
-      <p>Esta sección corresponde a: Entrega 7 (Fecha de entrega: 8/11/202020) -> Punto 1 y 2.</p>
-      <hr>
-      <p class="mb-0">Para saber qué debes hacer, fijate en la actividad en CREA correspondiente a esta entrega.</p>
-    </div>
+
+  </div>
+
   </div>
   <footer class="text-muted bg-light">
     <div class="container">
@@ -85,6 +139,7 @@
       <div></div>
     </div>
   </div>
+
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/dropzone.js"></script>

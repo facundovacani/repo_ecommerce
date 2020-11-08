@@ -23,16 +23,17 @@
       <a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a>
       <a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a>
       <a class="py-2 d-none d-md-inline-block" href="sell.html">Vender</a>
-      <div class= "dropdowon" id="infoUser" style="display: none;">
-        <button id="usuario" style="color: white;" class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          </button>
-          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="cart.html">Mi Carrito</a>
-            <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
-            <div class="dropdown-divider"></div>
-            <a id="exit" class="dropdown-item">Salir</a>
-            </div>
-    </div>
+      <div class="dropdowon" id="infoUser" style="display: none;">
+        <button id="usuario" style="color: white;" class="btn dropdown-toggle" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="cart.html">Mi Carrito</a>
+          <a class="dropdown-item" href="my-profile.html">Mi Perfil</a>
+          <div class="dropdown-divider"></div>
+          <a id="exit" class="dropdown-item">Salir</a>
+        </div>
+      </div>
     </div>
   </nav>
   <section class="jumbotron text-center">
@@ -51,10 +52,10 @@
           <div class="btn-group btn-group-toggle mb-4" data-toggle="buttons">
             <label class="btn btn-light active" id="sortAsc">
               <input type="radio" name="options" autocomplete="off" checked><i
-                class="fas fa-sort-amount-down mr-1"></i>USD
+                class="fas fa-sort-amount-up mr-1"></i>USD
             </label>
             <label class="btn btn-light" id="sortDesc">
-              <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-up mr-1"></i>USD
+              <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>USD
             </label>
             <label class="btn btn-light" id="sortByCount">
               <input type="radio" name="options" autocomplete="off"><i class="fas fa-sort-amount-down mr-1"></i>Ventas
@@ -84,20 +85,21 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="list-group" id="prod-list-container">
+      <div class="">
+        <div class="container">
+          <div class="row" id="prod-list-container">
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <div class="container p-5">
-    <div id="prod-list-container"></div>
-  </div>
   <footer class="text-muted bg-light">
     <div class="container">
       <p class="float-right">
         <a href="#">Volver arriba</a>
       </p>
+      <p>Este sitio forma parte de Desarrollo Web - JAP - 2020</p>
+      <p>Clickea <a target="_blank" href="Letra.pdf">aquí</a> para descargar la letra del obligatorio.</p>
     </div>
   </footer>
   <div id="spinner-wrapper">
