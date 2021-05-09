@@ -45,7 +45,7 @@ function showCategoriesList(){
             ((maxCount == undefined) || (maxCount != undefined && parseInt(category.productCount) <= maxCount))){
 
             htmlContentToAppend += `
-            <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="col-lg-4 col-md-6 col-sm-6 card-deck">
                 <a href="category-info.html" class="card mb-4 shadow-sm custom-card">
                     
                         
